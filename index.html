@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Создание сайтов</title>
+  <meta name="description" content="Профессиональная разработка сайтов">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "My Company",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png",
+    "sameAs": [
+      "https://facebook.com",
+      "https://instagram.com"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    
+
+  <main>
+
+    <nav class="breadcrumbs" aria-label="Breadcrumb"
+     itemscope itemtype="https://schema.org/BreadcrumbList">
+
+      <div class="container">
+        <ul class="breadcrumbs__list">
+
+    <!-- 1 -->
+    <li class="breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+
+      <svg class="breadcrumbs-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </svg>
+
+
+      <a href="/" class="breadcrumbs__link breadcrumbs__link--home" itemprop="item">
+        <span itemprop="name">Главная</span>
+      </a>
+
+      <meta itemprop="position" content="1">
+    </li>
+
+    <!-- 2 -->
+    <li class="breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+
+      <a href="#" class="breadcrumbs__link" itemprop="item">
+        <span itemprop="name">Услуги</span>
+      </a>
+
+      <meta itemprop="position" content="2">
+    </li>
+
+    <!-- 3 -->
+    <li class="breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+
+      <a href="#" class="breadcrumbs__link" itemprop="item">
+        <span itemprop="name">Создание сайтов</span>
+      </a>
+
+      <meta itemprop="position" content="3">
+    </li>
+
+    <!-- 4 (текущая страница) -->
+    <li class="breadcrumbs__item breadcrumbs__item--current"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+
+      <span class="breadcrumbs__current" itemprop="name">
+        Сайт + SEO
+      </span>
+
+      <meta itemprop="position" content="4">
+    </li>
+
+  </ul>
+      </div>
+    </nav>
+
+  <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <div class="hero__blur blur__blue"></div>
+          <h1 class="hero__title">
+            Создание сайта под ключ с SEO-продвижением 
+          </h1>
+
+          <p class="hero__text">
+            Разработка сайтов с учётом требований по SEO-продвижению с гарантией топовых позиций в поиске. Создаём веб-проекты, которые максимально быстро занимают верхние позиции в поисковиках. Проводим оптимизацию перед запуском, чтобы вам не приходилось менять контент и мета-теги после старта.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#" class="btn btn--primary">Заказать</a>
+            <a href="#" class="btn--secondary">
+              <span>Рассчитать стоимость</span>
+              <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </a>
+          </div>
+          <div class="hero__blur blur__gren"></div>
+        </div>
+
+        <div class="hero__image">
+          <img src="assets/images/hero-img.png" alt="Создание сайтов" loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="target">
+      <div class="container">
+        <h2 class="target__title">Кому рекомендуем выбрать создание сайтов с SEO-раскруткой</h2>
+
+        <div class="target__box">
+          <div class="target__card">
+            <div class="target__card--content">
+              <h3 class="target__card--title">Интернет-магазин</h3>
+              <p class="target__card--text">Создание и продвижение интернет-магазинов. Проектируем структуру фильтров под нечастотные запросы. Внедрим умный фильтр для SEO-тегов.</p>
+            </div>
+            <div class="target__card--images">
+              <img src="/assets/images/target-card-1.png" loading="lazy" alt="card-1">
+            </div>
+          </div>
+          <div class="target__card">
+            <div class="target__card--content">
+              <h3 class="target__card--title">Сфера услуг</h3>
+              <p class="target__card--text">Создание и продвижение продающих сайтов. Делаем специализированные сайты под SEO-запросы. Прорабатываем структуру под гео-запросы.</p>
+            </div>
+            <div class="target__card--images">
+              <img src="/assets/images/target-card-2.png" loading="lazy" alt="card-2">
+            </div>
+          </div>
+          <div class="target__card">
+            <div class="target__card--content">
+              <h3 class="target__card--title">B2B-сайты</h3>
+              <p class="target__card--text">Разработка и продвижение сайтов компаний, специализирующихся на предоставлении услуг корпоративному сегменту.</p>
+            </div>
+            <div class="target__card--images">
+              <img src="/assets/images/target-card-3.png" loading="lazy" alt="card-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services"></section>
+    <section class="cases"></section>
+    <section class="faq"></section>
+    <section class="form"></section>
+
+  </main>
+
+  <footer id="footer"></footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

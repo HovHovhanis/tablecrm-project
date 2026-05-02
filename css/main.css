@@ -7,6 +7,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  color: #1E1E1E;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,22 +18,77 @@ body {
 }
 
 .btn {
-    padding: 16px 35px;
-    background-color: #34AE6B;
-    color: #fff;
-    border-radius: 60px;
-    font-weight: 600;
-    cursor: pointer;
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: clamp(12px, 1.2vw, 16px) clamp(20px, 2vw, 35px);
+
+  font-size: clamp(14px, 1vw, 16px);
+  font-weight: 600;
+  line-height: 1;
+
+  color: #fff;
+  background: #34AE6B;
+
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.section__block {
+  margin-bottom: clamp(30px, 5vw, 60px);
+}
+
+.section__block--link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 600;
+}
+
+.section__block--link svg {
+  width: 24px;
+}
+
+.section-title {
+  max-width: clamp(320px, 80vw, 870px);
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+  color: #1E1E1E;
+}
+
+.section-text {
+    max-width: clamp(320px, 80vw, 1080px);
+    font-weight: 400;
+    font-size: clamp(14px, 1.2vw, 18px);
+    line-height: 1.2;
+    color: #1E1E1E;
+}
+
+
+.pt-150 {
+  padding-top: clamp(80px, 10vw, 150px);
 }
 
 /* Адаптив */
-@media (max-width: 640px) {
-  .nav {
-    display: none;
-    flex-direction: column;
+
+@media (max-width: 768px) {
+
+  .section-title {
+     max-width: clamp(100%);
   }
 
-  .burger {
-    display: flex;
+  .section__block--link{
+    display: none;
   }
 }
+

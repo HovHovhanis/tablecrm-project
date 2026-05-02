@@ -31,7 +31,6 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
-
 }
 
 /* Text-level semantics
@@ -123,6 +122,7 @@ select {
 
 ul, li {
   list-style: none;
+  padding: 0;
 }
 
 /* Remove default styles in Safari */

@@ -39,31 +39,52 @@
           </div>
         </li>
 
-        <li class="nav__item">
-          <a href="#" class="nav__link">
+        <li class="nav__item nav__item--has-dropdown">
+          <button class="nav__link  nav__toggle">
             Готовые решения
-            <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+             <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
             </svg>
-          </a>
+          </button>
+
+           <div class="dropdown">
+            <ul class="dropdown__list">
+              <li><a href="#" class="dropdown__link">Дизайн сайта</a></li>
+              <li><a href="/index.html" class="dropdown__link">Сайт+SEO</a></li>
+            </ul>
+          </div>
         </li>
 
-        <li class="nav__item">
-          <a href="#" class="nav__link">
+         <li class="nav__item nav__item--has-dropdown">
+          <button class="nav__link  nav__toggle">
             Кейсы и проекты
-            <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+             <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
             </svg>
-          </a>
+          </button>
+
+           <div class="dropdown">
+            <ul class="dropdown__list">
+              <li><a href="#" class="dropdown__link">Дизайн сайта</a></li>
+              <li><a href="/index.html" class="dropdown__link">Сайт+SEO</a></li>
+            </ul>
+          </div>
         </li>
 
-        <li class="nav__item">
-          <a href="#" class="nav__link">
+          <li class="nav__item nav__item--has-dropdown">
+          <button class="nav__link  nav__toggle">
             О нас
-          <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-          </a>
+             <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+
+           <div class="dropdown">
+            <ul class="dropdown__list">
+              <li><a href="#" class="dropdown__link">Дизайн сайта</a></li>
+              <li><a href="/index.html" class="dropdown__link">Сайт+SEO</a></li>
+            </ul>
+          </div>
         </li>
 
       </ul>
@@ -82,6 +103,12 @@
           </svg>
         </button>
 
+         <button class="burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <button class="btn">
           Обсудить проект
         </button>
@@ -91,11 +118,7 @@
     </nav>
 
     <!-- BURGER -->
-    <button class="burger" aria-label="Открыть меню">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+   
 
   </div>
 </header>

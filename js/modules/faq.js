@@ -2,10 +2,18 @@ export function initFAQ() {
   const items = document.querySelectorAll('.faq__item');
 
   items.forEach(item => {
-    const question = item.querySelector('.faq__question');
+    const btn = item.querySelector('.faq__question');
 
-    question.addEventListener('click', () => {
-      item.classList.toggle('faq__item--active');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // закрыть все
+      items.forEach(i => i.classList.remove('active'));
+
+      // открыть текущий
+      if (!isOpen) {
+        item.classList.add('active');
+      }
     });
   });
 }

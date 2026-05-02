@@ -1,24 +1,30 @@
-export function initDropdown() {
-  const items = document.querySelectorAll('.nav__item--has-dropdown');
-  console.log(items)
+export function initDropdown(root = document) {
+  const items = root.querySelectorAll('.nav__item--has-dropdown');
 
   items.forEach(item => {
     const btn = item.querySelector('.nav__toggle');
+    if (!btn) return;
 
     btn.addEventListener('click', (e) => {
+      e.preventDefault();
       e.stopPropagation();
 
-      // закрыть другие
-      items.forEach(i => {
-        if (i !== item) i.classList.remove('nav__item--open');
-      });
+      const isOpen = item.classList.contains('nav__item--open');
 
-      item.classList.toggle('nav__item--open');
+      // закрыть все
+      items.forEach(i => i.classList.remove('nav__item--open'));
+
+      // открыть текущий
+      if (!isOpen) {
+        item.classList.add('nav__item--open');
+      }
     });
   });
 
-  // клик вне — закрыть всё
-  document.addEventListener('click', () => {
-    items.forEach(item => item.classList.remove('nav__item--open'));
+  // закрытие по клику вне
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav__item--has-dropdown')) {
+      items.forEach(i => i.classList.remove('nav__item--open'));
+    }
   });
 }

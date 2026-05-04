@@ -84,11 +84,11 @@ body {
 @media (max-width: 768px) {
 
   .section-title {
-     max-width: clamp(100%);
+     width: 100%;
+     max-width: none;
   }
 
   .section__block--link{
     display: none;
   }
 }
-

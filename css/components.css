@@ -56,9 +56,63 @@
   transition: 0.3s;
 }
 
-.nav__item--open .nav__icon {
-  transform: rotate(180deg);
+.nav__search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 10;
 }
+
+.nav__search-btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+  transition: .2s ease;
+}
+
+.nav__search-btn:hover .nav__icon {
+  transform: scale(1.2);
+}
+
+.nav__search-input {
+  position: absolute;
+  right: 0;
+  min-width: 0;
+  opacity: 0;
+  outline: none;
+  border: 1px solid #34AE6B;
+  border-radius: 4px;
+  padding: 8px 10px;
+  transition: 0.3s ease;
+  z-index: 1001;
+  background-color: #FFF;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nav__search.active {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* активное состояние */
+.nav__search.active .nav__search-input {
+  width: 240px;
+  opacity: 1;
+  right: 50px;
+}
+
+/* фокус */
+.nav__search-input:focus {
+  border-color: #34AE6B;
+}
+
+
 
 /* DROPDOWN */
 .dropdown {
@@ -1180,6 +1234,7 @@
   .nav__right .btn {
     display: none; 
   }
+
 }
 
 

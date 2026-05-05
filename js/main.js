@@ -1,7 +1,7 @@
 import { initDropdown } from './modules/dropdown.js';
 import { initFAQ } from './modules/faq.js';
 import { initForm } from './modules/form.js';
-import { initMenu } from './modules/menu.js';
+import { initMenu, initSearch } from './modules/menu.js';
 import { initSlider } from './modules/slider.js';
 import { sliderManager } from './modules/slider.js';
 
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // 1. Загружаем компоненты (синхронно по порядку)
   await loadComponent('header', 'components/header.html');
-  await loadComponent('footer', 'components/footer.html');
   await loadComponent('content', 'content.html')
+  await loadComponent('footer', 'components/footer.html');
 
   // 2. Инициализация UI (после полной вставки DOM)
   initDropdown(document);
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initFAQ();
   initForm();
   initMenu();
+  initSearch();
   sliderManager.register({
     selector: '.target__box',
     pagination: '.target__box .swiper-pagination'

@@ -37,3 +37,35 @@ export function initMenu() {
     }
   });
 }
+
+export function initSearch() {
+  const search = document.querySelector('.nav__search');
+  const btn = document.querySelector('.nav__search-btn');
+  const input = document.querySelector('.nav__search-input');
+
+  if (!search || !btn || !input) return;
+
+  // открыть/закрыть
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    search.classList.toggle('active');
+
+    if (search.classList.contains('active')) {
+      input.focus();
+    }
+  });
+
+  // клик вне — закрыть
+  document.addEventListener('click', (e) => {
+    if (!search.contains(e.target)) {
+      search.classList.remove('active');
+    }
+  });
+
+  // ESC — закрыть
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      search.classList.remove('active');
+    }
+  });
+}

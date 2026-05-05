@@ -132,6 +132,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  cursor: pointer;
 }
 
 /* Remove inner border in Firefox */
